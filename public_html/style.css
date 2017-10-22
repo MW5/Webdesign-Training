@@ -1,3 +1,5 @@
+/*base hex FFAA00*/
+
 *:focus {
     outline: 0;
 }
@@ -45,6 +47,34 @@
     min-height: 100vh;
 }
 
+/*SVG*/
+svg {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* Below we are targeting our path element. Lets give dasharray and the offset some values. Try a value under 100 and another value over 1000. */
+/* Here I have selected the paths inside the g element with a class of mainbody so the eyes and nose remain unaffected. The element "g" is for group and is like using a div to organize the paths.*/
+#leaf {
+  stroke-dasharray:1300;
+  stroke-dashoffset:1300;
+  animation: draw 3s alternate forwards;
+}
+#leaf_leg {
+  stroke-dasharray:100;
+  stroke-dashoffset:100;
+  animation: draw 3s alternate forwards;
+}
+
+/* Here we are making an animation and removing the dash offset so it comes into view */
+@keyframes draw {
+  to {
+  stroke-dashoffset:0;
+  }
+}
+
 #about_section {
     height: 100vh;
     background-image: url("bench2.png");
@@ -57,7 +87,7 @@
     opacity: 0.1;
     transition: ease-in-out 1.5s;
 }
-#carousel_section.faded {
+#carousel_section.visible {
     opacity: 1;
 }
 
