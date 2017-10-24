@@ -4,7 +4,12 @@
     outline: 0;
 }
 
+body {
+        font-family: 'Sofia';
+}
+
 .nav-link {
+    font-size: 1.2rem;
     color: rgb(170, 132, 57);
     transition: ease-in-out 1s;
 }
@@ -53,33 +58,63 @@ svg {
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+}
+svg.moved {
+    transform:perspective(500px) rotate3d(1,2,1,210deg);
 }
 
-/* Below we are targeting our path element. Lets give dasharray and the offset some values. Try a value under 100 and another value over 1000. */
-/* Here I have selected the paths inside the g element with a class of mainbody so the eyes and nose remain unaffected. The element "g" is for group and is like using a div to organize the paths.*/
 #leaf {
-  stroke-dasharray:1300;
-  stroke-dashoffset:1300;
-  animation: draw 3s alternate forwards;
+    stroke-dasharray:1300;
+    stroke-dashoffset:1300;
+    animation: draw_leaf 3s alternate forwards;
 }
 #leaf_leg {
-  stroke-dasharray:100;
-  stroke-dashoffset:100;
-  animation: draw 3s alternate forwards;
+    stroke-dasharray:100;
+    stroke-dashoffset:100;
+    animation: draw_leaf_leg 3s alternate forwards;
 }
 
 /* Here we are making an animation and removing the dash offset so it comes into view */
-@keyframes draw {
-  to {
-  stroke-dashoffset:0;
-  }
+@keyframes draw_leaf {
+    to {
+    stroke-dashoffset:0;
+    fill: #ff7400;
+    }
+}
+@keyframes draw_leaf_leg {
+    to {
+    stroke-dashoffset:0;
+    }
+}
+#heading_text {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: none;
 }
 
+
 #about_section {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("bench2.png");
     background-size: cover;
     background-position: 50%, 50%;
+}
+#about_section_text_container {
+    min-height: 100vh;
+    line-height: 100vh;
+}
+
+#about_text {
+    display: none;
+    text-indent: 50px;
+    text-align: justify;
+    font-style: italic;
+    line-height: 2.5;
+    vertical-align: middle;
 }
 
 #carousel_section {
@@ -92,10 +127,5 @@ svg {
 }
 
 #contact_section {
-    min-height: 100vh;
-}
-
-/*TO REMOVE*/
-#test {
     min-height: 100vh;
 }

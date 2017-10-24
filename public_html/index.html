@@ -4,6 +4,7 @@
         <title>Autumn</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
         <script src="jquery-3.2.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="bootstrap.js"></script>
@@ -32,6 +33,7 @@
             
             <section id="home_section">
                 <svg
+                    id="svg_heading"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -40,15 +42,24 @@
                  >
                 <path id="leaf" fill="transparent" fill-opacity="1" stroke="#ff7400" stroke-opacity="1" stroke-width="5"
                       stroke-dasharray="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero"
-                      opacity="1" d="M 153,218 65,229 87,207 21,163 76,152 43,119 h 22 l -11,-55 44,33 22,33 -11,-77 22,11 22,-55 22,55 22,
-                      -11 -11,77 22,-33 44,-33 -11,55 h 22 l -33,33 55,11 -66,44 22,22 -88,-11"/>
-                <path id="leaf_leg" fill="transparent" fill-opacity="1" stroke="#ac8439" stroke-opacity="1" stroke-width="5"
+                      opacity="1" d="m 138.40862,215.36518 -88.000002,11 22,-22 -65.9999997,-44 54.9999997,-11 -33,-33 h 22 l -11,
+                      -55.000008 44,33 22.000002,33.000008 -11.000002,-77.000008 22.000002,11 22,-55.0000002 22,55.0000002 22,
+                      -11 -11,77.000008 22,-33.000008 44,-33 -11,55.000008 h 22 l -33,33 55,11 -66,44 22,22 -88,-11"/>
+                <path id="leaf_leg" fill="transparent" fill-opacity="1" stroke="#ff7400" stroke-opacity="1" stroke-width="5"
                       stroke-dasharray="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero"
-                      opacity="1" d="m 153,218 c 8.50116,12.85542 12.45142,28.65643 11,44 -1.57993,16.70209 -9.58629,32.7148 -22,44"/>
+                      opacity="1" d="m 138.40862,215.36518 c 8.50116,12.85542 12.45142,28.65643 11,44 -1.57993,16.70209 -9.58629,32.7148 -22,44"/>
                  </svg>
+                 <h1 id="heading_text">Autumn</h1>
+                 
             </section>
             
             <section id="about_section">
+                <div id="about_section_text_container" class="container">
+                    <p id="about_text">"Autumn, also known as fall in American and Canadian English, is one of the four temperate seasons.
+                    Autumn marks the transition from summer to winter, in September (Northern Hemisphere) or March (Southern Hemisphere),
+                    when the duration of daylight becomes noticeably shorter and the temperature cools down considerably.
+                    One of its main features is the shedding of leaves from deciduous trees."</p>
+                </div>
             </section>
             
             <section id="carousel_section">
@@ -81,10 +92,6 @@
             </section>
             <section id="contact_section">
                 CONTACT
-            </section>
-            <!--TO REMOVE-->
-            <section id="test">
-                test
             </section>
         </div>
     </body>
