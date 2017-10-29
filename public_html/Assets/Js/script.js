@@ -27,7 +27,7 @@ $(document).ready(function(){
                     && aboutTypewrited==false) {
                 aboutTypewrited = true;
                 $("#about_text").css("display", "inline-block");
-                startTypewriting("#about_text", 100, 6000);
+                startTypewriting("#about_text", 50, 6000);
             }
             //going down carousel
             if ($(window).scrollTop()>=$("#carousel_section").position().top-$("#carousel_section").height()
@@ -93,17 +93,7 @@ $(document).ready(function(){
         offset: 400
     });
     
-        //calculate font size according to screen and desired ratio
-    function calcFontSize(ratio) {
-        var properRatio = ratio;
-        var properFontSize = $(document).width()/properRatio;
-        return properFontSize;
-    }
-    
-    //heading text ratio = 7.14
-    $("#heading_text").css("font-size",calcFontSize(7.14));
-    //about text ratio = 44.625
-    $("#about_text").css("font-size",calcFontSize(44.625));
+
     
     //start animations
         //heading typewriting

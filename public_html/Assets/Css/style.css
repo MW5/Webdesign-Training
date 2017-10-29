@@ -9,7 +9,7 @@ body {
 }
 
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 20px;
     color: rgb(170, 132, 57);
     transition: ease-in-out 1s;
 }
@@ -89,6 +89,7 @@ svg.moved {
     }
 }
 #heading_text {
+    font-size: 200px;
     position:absolute;
     top:50%;
     left:50%;
@@ -96,10 +97,10 @@ svg.moved {
     display: none;
 }
 
-
 #about_section {
+    font-size: 32px;
     min-height: 100vh;
-    background-image: url("bench2.png");
+    background-image: url("Assets/Images/bench.png");
     background-size: cover;
     background-position: 50%, 50%;
 }
@@ -118,9 +119,15 @@ svg.moved {
 }
 
 #carousel_section {
+    min-height: 100vh;
     line-height: 100vh;
     opacity: 0.1;
     transition: ease-in-out 1.5s;
+}
+#my_carousel {
+        width: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 #carousel_section.visible {
     opacity: 1;
@@ -128,4 +135,82 @@ svg.moved {
 
 #contact_section {
     min-height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+}
+#contact_form {
+    display: inline-block;
+    text-indent: 50px;
+    text-align: justify;
+    font-style: italic;
+    line-height: 2.5;
+    vertical-align: middle;
+}
+
+#contact_form input {
+    border: 1px solid rgb(170, 132, 57);
+    color: rgb(170, 132, 57);
+}
+#contact_form textarea {
+    border: 1px solid rgb(170, 132, 57);
+    color: rgb(170, 132, 57);
+}
+
+#contact_form_submit_btn {
+    cursor: pointer;
+    margin-left: 40%;
+    maring-right: 40%;
+    width: 20%;
+    -webkit-transition: width 2s, margin 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, margin 2s;
+    background-color: rgb(170, 132, 57);
+    color: rgb(255, 174, 12);
+}
+#contact_form_submit_btn:hover {
+    margin-left: 0px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-link {
+        font-size: 12px;
+        background-color: rgb(255, 174, 12);
+        border-radius: 0;
+    }
+    .nav-link:hover {
+        -webkit-transform: scale(0.8,0.8) rotateY(30deg); /* Safari */
+        transform: scale(0.8,0.8); /* Safari */
+        background-color: rgb(170, 132, 57);
+        color: rgb(255, 174, 12);
+        border-radius: 0
+    }
+    svg {
+        display: none;
+    }
+    #heading_text {
+        font-size: 50px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        display: none;
+    }
+
+    #about_section {
+        font-size: 16px;
+        min-height: 100vh;
+        background-image: url("Assets/Images/bench.png");
+        background-size: cover;
+        background-position: 50%, 50%;
+    }
+    #contact_section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #contact_form_submit_btn {
+        font-size: 12px;
+    }
+    #email_help {
+        font-size: 10px;
+    }
 }
