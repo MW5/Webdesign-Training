@@ -111,7 +111,6 @@ svg.moved {
 
 #about_text {
     display: none;
-    text-indent: 50px;
     text-align: justify;
     font-style: italic;
     line-height: 2.5;
@@ -140,7 +139,7 @@ svg.moved {
 }
 #contact_form {
     display: inline-block;
-    text-indent: 50px;
+    width: 100%;
     text-align: justify;
     font-style: italic;
     line-height: 2.5;

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     //nav target animation
-    $("a").on('click', function(event) {
+    $(".nav-link").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
